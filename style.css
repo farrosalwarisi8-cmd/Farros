@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: gainsboro;
-  background-image: url("./assets/background-1.webp");
+  background-image: url("./assets/download (4).jpeg");
   background-size: cover;
 }
 
@@ -18,7 +18,13 @@ main {
  
 .avatar {
   width: 100px;
+  height:90px;
   border-radius: 50%;
+  animation-name: infinite-scale;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; /* Membuat animasi bolak-balik */
+  animation-timing-function: ease-in-out;
 }
 
 h1,
@@ -62,7 +68,7 @@ p {
 }
  
 .sosmed:hover {
-  background-color: #01df94;
+  background-color: #11055a;
   color: white;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -71,4 +77,16 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+@keyframes infinite-scale {
+  0% {
+    transform: scale(1); /* Ukuran normal */
+  }
+  50% {
+    transform: scale(1.2); /* Memperbesar hingga 120% */
+  }
+  100% {
+    transform: scale(1); /* Kembali ke ukuran normal */
+  }
 }
